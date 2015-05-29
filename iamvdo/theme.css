@@ -20,7 +20,7 @@ body {
   font-family: Open Sans, sans-serif;
   font-size: 36px;
   font-weight: normal;
-  letter-spacing: -0.05em;
+  /* letter-spacing: -0.05em; */
   color: white;
   color: #fff;
 }
@@ -154,10 +154,10 @@ body {
   vertical-align: middle;
   margin: 0 5px;
 }
-.reveal .info {
+.reveal .Info {
   font-size: .6em;
-  font-style: italic;
   color: #111;
+  text-align: center;
 }
 .reveal .section--title h2 {
   color: #f03d36;
@@ -316,6 +316,36 @@ body {
   max-height: 300px;
 }
 
+/*********************************************
+ * PARTS
+ *********************************************/
+.part .state-background {
+  background: #2980b9;
+  background-size: 100%;
+}
+.part h1 {
+  color: #FFF;
+}
+
+.jumbo .state-background {
+  background: yellow;
+  background-size: 100%;
+}
+.reveal .Jumbo-titre {
+  color: #f63752;
+  font-size: 2em;
+  font-family: Roboto Slab, serif;
+  margin: .5em 0;
+  letter-spacing: -.05em;
+  text-align: center;
+}
+
+.showcase .state-background {
+  background: #333;
+}
+.reveal .Showcase-text {
+  color: #eee;
+}
 
 /*********************************************
  * LINKS

@@ -1,7 +1,7 @@
 <?php 
 
 if (!isset($root)) {
-  $root = '';
+  $root = '.';
 }
 
  ?>
@@ -10,6 +10,7 @@ if (!isset($root)) {
 
   <head>
     <meta charset="utf-8">
+    <base href="<?php echo $root; ?>">
 
     <title>KiwiParty 2015</title>
 
@@ -26,11 +27,11 @@ if (!isset($root)) {
     <link href='http://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet'>
     <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400' rel='stylesheet'>
 
-    <link rel="stylesheet" href="<?php echo $root; ?>css/reveal.min.css">
-    <link rel="stylesheet" href="<?php echo $root; ?>plugin/prismjs/prism.css">
-    <link rel="stylesheet" href="<?php echo $root; ?>iamvdo/theme.css" id="theme">
-    <link rel="stylesheet" href="<?php echo $root; ?>iamvdo/meetup.css">
-    <link rel="stylesheet" href="<?php echo $root; ?>plugin/nav/nav.css">
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="plugin/prismjs/prism.css">
+    <link rel="stylesheet" href="iamvdo/theme.css" id="theme">
+    <link rel="stylesheet" href="iamvdo/meetup.css">
+    <link rel="stylesheet" href="plugin/nav/nav.css">
 
     <!-- If the query includes 'print-pdf', include the PDF print sheet -->
     <script>
@@ -38,7 +39,7 @@ if (!isset($root)) {
         var link = document.createElement( 'link' );
         link.rel = 'stylesheet';
         link.type = 'text/css';
-        link.href = '<?php echo $root; ?>css/print/pdf.css';
+        link.href = 'css/print/pdf.css';
         document.getElementsByTagName( 'head' )[0].appendChild( link );
       }
     </script>
@@ -72,6 +73,29 @@ if (!isset($root)) {
           </ul>
         </section>
 
+        <section data-state="jumbo">
+          <p class="Jumbo-titre">Des icones ?</p>
+        </section>
+
+        <section data-state="showcase">
+          <img src="iamvdo/images/icon-90s.png" alt="">
+          <p class="Showcase-text Info">yahoo.com <small>(20 décembre 1996)</small>, fnac.com <small>(11 mai 2000)</small>, amazon.com <small>(9 juin 2000)</small>, System 1 Mac <small>(1984)</small></p>
+        </section>
+
+        <section data-state="showcase">
+          <img src="iamvdo/images/icon-construction.gif" alt="">
+        </section>
+
+        <section data-state="jumbo">
+          <p class="Jumbo-titre">Genre beaucoup ?</p>
+          <p class="Jumbo-titre fragment">SPRITES FTW</p>
+        </section>
+
+        <section data-state="showcase">
+          <img src="iamvdo/images/sprite-google.png" alt="">
+          <p class="Showcase-text Info">Sprite utilisé par Google Documents</p>
+        </section>
+
         <section data-state="part">
           <h1>Titre</h1>
         </section>
@@ -102,8 +126,8 @@ a {
     <div class="info-overlay" id="info-twitter"><a href="https://twitter.com/iamvdo">@iamvdo</a></div>
     <div class="info-overlay" id="info-slides"><a href="http://slides.iamvdo.me/kiwiparty15">slides.iamvdo.me/kiwiparty15</a></div>
 
-    <script src="<?php echo $root; ?>lib/js/head.min.js"></script>
-    <script src="<?php echo $root; ?>js/reveal.min.js"></script>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.min.js"></script>
 
     <script>
 
@@ -126,14 +150,14 @@ a {
 
         // Optional libraries used to extend on reveal.js
         dependencies: [
-          { src: '<?php echo $root; ?>lib/js/classList.js', condition: function() { return !document.body.classList; } },
-          { src: '<?php echo $root; ?>plugin/prismjs/prism.js', async: true, callback: function () {
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/prismjs/prism.js', async: true, callback: function () {
             Prism.highlightAll();
           } },
-          { src: '<?php echo $root; ?>plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-          { src: '<?php echo $root; ?>plugin/prefixfree/prefixfree.js', async: true },
-          { src: '<?php echo $root; ?>plugin/live-coding/live-coding.js', async: true, condition: function() { return !!document.body.classList; }},
-          { src: '<?php echo $root; ?>plugin/nav/nav.js', async: true}
+          { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'plugin/prefixfree/prefixfree.js', async: true },
+          { src: 'plugin/live-coding/live-coding.js', async: true, condition: function() { return !!document.body.classList; }},
+          { src: 'plugin/nav/nav.js', async: true}
         ]
       });
 
