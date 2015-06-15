@@ -1,0 +1,49 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <g>
+    <style type="text/css">
+    svg {
+      fill: yellow;
+    }
+    #bigOne.turn {
+      animation: turn 1.6s both infinite;
+    }
+    #smallOne.turn {
+      animation: turn2 1.1s both infinite;
+    }
+    @keyframes turn {
+      to {
+        transform: rotate(270deg);
+      }
+    }
+    @keyframes turn2 {
+      to {
+        transform: rotate(630deg);
+      }
+    }
+    </style>
+    <path d="M83.423,29.432l5.809-5.808l-6.269-6.267l-5.831,5.832C69.708,17.184,60.269,13.576,50,13.576c-23.826,0-43.212,19.385-43.212,43.212S26.174,100,50,100s43.212-19.385,43.212-43.212C93.212,46.416,89.536,36.889,83.423,29.432z M50,91.136c-18.939,0-34.348-15.408-34.348-34.348c0-18.94,15.408-34.348,34.348-34.348s34.348,15.408,34.348,34.348C84.348,75.728,68.939,91.136,50,91.136z"/>
+    <path d="M44.459,11.08h11.08c3.06,0,5.54-2.48,5.54-5.54S58.599,0,55.539,0h-11.08c-3.062,0-5.54,2.48-5.54,5.54S41.397,11.08,44.459,11.08z"/>
+    <rect id="bigOne" width="35" height="10" x="45" y="52" rx="5" style="transform-origin: 50px 57px; transform: rotate(-90deg)"/>
+    <rect id="smallOne" width="30" height="10" x="45" y="52" rx="5" style="transform-origin: 50px 57px; transform: rotate(-90deg)"/>
+    <script>
+    var bigOne = document.getElementById('bigOne');
+    var smallOne = document.getElementById('smallOne');
+    function applyAnim () {
+      bigOne.classList.add('turn');
+      setTimeout(function () {
+        smallOne.classList.add('turn');
+      }, 500);
+      setTimeout(function () {
+        bigOne.classList.remove('turn');
+        smallOne.classList.remove('turn');
+      }, 1500);
+      setTimeout(function () {
+        bigOne.classList.add('turn');
+        applyAnim();
+      }, 3000);
+    }
+    applyAnim();
+
+    </script>
+  </g>
+</svg>

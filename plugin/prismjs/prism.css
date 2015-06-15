@@ -91,6 +91,7 @@ pre[class*="language-"] code {
   color: #f03d36;
 }
 
+.token.atrule,
 .token.selector,
 .token.attr-name,
 .token.string,
@@ -109,7 +110,6 @@ pre[class*="language-"] code {
   background: hsla(0, 0%, 100%, .5);
 }
 
-.token.atrule,
 .token.attr-value,
 .token.keyword {
   color: #f03d36;

@@ -53,7 +53,7 @@
 <body>
 
   <?php 
-  echo file_get_contents('storage.svg');
+  echo file_get_contents('../iamvdo/demos/storage.svg');
    ?>
   
   <h1>Your actual storage</h1>

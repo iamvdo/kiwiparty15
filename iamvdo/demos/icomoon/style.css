@@ -9,7 +9,7 @@
 	font-style: normal;
 }
 
-[class^="icon-"], [class*=" icon-"] {
+.reveal [class^="icon-"], .reveal [class*=" icon-"] {
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
@@ -23,19 +23,19 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.icon-icon_mail:before {
+.reveal .icon-icon_mail:before {
 	content: "\e600";
 }
 
-.icon-icon_mail-with-notif:before {
+.reveal .icon-icon_mail-with-notif:before {
 	content: "\e601";
 }
 
-.icon-icon_mail-with-notif-color .path1:before {
+.reveal .icon-icon_mail-with-notif-color .path1:before {
 	content: "\e602";
 	color: rgb(0, 0, 0);
 }
-.icon-icon_mail-with-notif-color .path2:before {
+.reveal .icon-icon_mail-with-notif-color .path2:before {
 	content: "\e603";
 	margin-left: -1em;
 	color: rgb(128, 128, 128);

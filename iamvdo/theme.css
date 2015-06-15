@@ -58,7 +58,7 @@ body {
 }
 .reveal .slides > section {
     height: 100%;
-    padding: 50px 0;
+    padding: 0;
 }
 .reveal .slides > section > section {
     height: 100%;
@@ -154,11 +154,6 @@ body {
   vertical-align: middle;
   margin: 0 5px;
 }
-.reveal .Info {
-  font-size: .6em;
-  color: #111;
-  text-align: center;
-}
 .reveal .section--title h2 {
   color: #f03d36;
 }
@@ -194,7 +189,7 @@ body {
 .reveal ol ul,
 .reveal ol ol {
   margin: 0 1.5em 5px 1.5em;
-  font-size: .9em;
+  font-size: .8em;
 }
 .reveal ul ul {
     list-style: disc;
@@ -280,21 +275,20 @@ body {
 }
 .reveal table th,
 .reveal table td {
-  padding: 0.2em;
+  padding: .5em .2em;
+  text-align: center;
+  width: 50%;
 }
 .reveal table th {
+  font-size: 2.6rem;
+  letter-spacing: -.05em;
   background: rgba(0,0,0,.8);
 }
 .reveal table td {
+  font-size: 2rem;
   background: rgba(0,0,0,.5);
 }
-.reveal table tr:first-child th,
-.reveal table td {
-  text-align: center;
-}
-.reveal table th:first-child {
-  width: 200px;
-}
+
 .me {
   background: url('images/sites.png') bottom right no-repeat;
 }
@@ -331,13 +325,16 @@ body {
   background: yellow;
   background-size: 100%;
 }
-.reveal .Jumbo-titre {
+.reveal .Jumbo-title {
   color: #f63752;
   font-size: 2em;
   font-family: Roboto Slab, serif;
   margin: .5em 0;
   letter-spacing: -.05em;
   text-align: center;
+}
+.reveal .Jumbo-title--big {
+  font-size: 3em;
 }
 
 .showcase .state-background {
@@ -410,6 +407,30 @@ body {
 @keyframes overlay {
   from { -webkit-transform: scale(0); transform: scale(0); }
   to { -webkit-transform: scale(1); transform: scale(1); }
+}
+
+.reveal .Image--unstyled {
+  border: none;
+  box-shadow: none;
+  background: transparent;
+}
+.reveal .Image--side,
+.reveal .Image-legend--side {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 1em;
+}
+.reveal .Image--fakealign {
+  padding-left: 2em;
+}
+.reveal .Image-legend {
+  margin-top: 2em;
+  font-size: .6em;
+  text-align: center;
+}
+.reveal .Subtitle--discreet {
+  font-size: 2.8rem;
+  text-align: left;
 }
 
 /*********************************************
