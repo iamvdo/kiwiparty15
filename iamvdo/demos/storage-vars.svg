@@ -1,0 +1,22 @@
+<svg width="0" height="0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <clipPath id="clip-css">
+    <use xlink:href="#part4" />
+    <use xlink:href="#part3" />
+    <use xlink:href="#part2" />
+    <use xlink:href="#part1" />
+  </clipPath>
+
+  <symbol id="new" viewBox="0 0 100 100">
+
+    <style>
+    .remaining {
+      fill: hsl(var(--remaining),100%,50%);
+      transform: translateY(calc(var(--remaining) * 1px));
+    }
+    </style>
+    <g clip-path="url(#clip-css)">
+      <rect width="100" height="100" fill="#777" />
+      <path class="remaining" d="M100,100H0V-19.5h18.333C18.333-2.333,32.843,0.167,50,0.167S82.167-2.167,82.167-19.5H100V100z" />
+    </g>
+  </symbol>
+</svg>
