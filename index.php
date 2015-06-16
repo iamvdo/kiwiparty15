@@ -23,8 +23,7 @@ if (!isset($root)) {
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet'>
-    <link href='http://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet'>
+    <!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet'> -->
     <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400' rel='stylesheet'>
 
     <link rel="stylesheet" href="css/reveal.min.css">
@@ -83,8 +82,8 @@ if (!isset($root)) {
         </section>
 
         <section data-state="jumbo">
-          <p class="Jumbo-title">Genre beaucoup ?</p>
-          <p class="Jumbo-title fragment">SPRITES FTW</p>
+          <p class="Jumbo-title">Beaucoup d'icones</p>
+          <p class="Jumbo-title Jumbo-title--big fragment">SPRITES FTW</p>
         </section>
 
         <section data-state="showcase">
@@ -92,24 +91,24 @@ if (!isset($root)) {
           <p class="Showcase-text Image-legend">Sprite utilisé par Google Documents</p>
         </section>
 
+        <section data-state="jumbo">
+          <p class="Jumbo-title Jumbo-title--big">RETINA, HD</p>
+        </section>
+
         <section data-state="showcase">
-          <img class="Image Image--unstyled" src="iamvdo/images/retina.svg" alt="" width="600">
-          <p class="Showcase-text Image-legend">Densité de pixels</p>
+          <img class="Image Image--unstyled" src="iamvdo/images/retina.png" alt="" width="600">
+          <p class="Showcase-text Image-legend">Ecran faible densité vs. écran haute densité</p>
         </section>
 
         <section data-state="showcase">
           <img class="Image Image--unstyled Image--side Image--fakealign" src="iamvdo/images/kiwi-64.png" alt="">
           <img class="Image Image--unstyled Image--side" src="iamvdo/images/kiwi-128.png" alt="">
-          <p class="Showcase-text Image-legend"><code>kiwi.png</code>, <code>kiwi@2x.png</code>, <code>kiwi@2.6x.png</code>, etc...</p>
+          <p class="Showcase-text Image-legend">Création d'images adaptées: <code>kiwi.png</code>, <code>kiwi@2x.png</code>, <code>kiwi@2.6x.png</code>, etc...</p>
         </section>
 
         <section data-state="jumbo">
           <p class="Jumbo-title">Ce n'est pas viable</p>
-          <ul>
-            <li>Trop d'assets à créer / maintenir</li>
-            <li>Sprites trop complexe</li>
-          </ul>
-          <p class="Jumbo-title">La solution ?</p>
+          <p class="Jumbo-title fragment">Surtout pour des sprites !</p>
         </section>
 
         <section data-state="part">
@@ -182,14 +181,26 @@ if (!isset($root)) {
 
         <section>
           <h2 class="Subtitle Subtitle--discreet">Utilisation, intégration</h2>
+          <div class="Score">
+            <div class="Score-icon Score-icon--font"></div>
+            <div class="Score-icon Score-icon--SVG"></div>
+          </div>
           <table>
             <tr>
               <th>Icon-font</th>
               <th>SVG</th>
             </tr>
             <tr>
-              <td>1 seule méthode d'inclusion</td>
-              <td>6 méthodes d'inclusion</td>
+              <td><ul><li>1 seule méthode d'inclusion</li></ul></td>
+              <td>
+                <ul>
+                  <li>6 méthodes d'inclusion
+                    <ul>
+                      <li>Inline, <code>&lt;use></code>, <code>&lt;object></code>, <code>&lt;embed></code>, <code>&lt;img></code>, <code>background-image</code></li>
+                    </ul>
+                  </li>
+                </ul>
+              </td>
             </tr>
             <tr class="Points fragment">
               <td class="Point"></td>
@@ -199,34 +210,68 @@ if (!isset($root)) {
         </section>
 
         <section data-state="part">
-          <h1>Support<br>Fallback</h1>
+          <h1>Support</h1>
         </section>
 
         <section>
-          <h2 class="Subtitle Subtitle--discreet">Support, fallback</h2>
+          <h2 class="Subtitle Subtitle--discreet">Support</h2>
+          <div class="Score">
+            <div class="Score-icon Score-icon--font"></div>
+            <div class="Score-icon Score-icon--SVG"></div>
+          </div>
           <table>
             <tr>
               <th>Icon-font</th>
               <th>SVG</th>
             </tr>
             <tr>
-              <td>IE6+</td>
-              <td>IE9+</td>
+              <td><ul><li>IE6+</li><li>Pas Opera Mini</li></ul></td>
+              <td><ul><li>IE9+</li><li>Opera Mini</li></ul></td>
             </tr>
             <tr class="Points fragment">
               <td class="Point Point--plus"></td>
-              <td class="Point"></td>
+              <td class="Point Point--plus"></td>
             </tr>
-            <tr class="fragment">
+          </table>
+        </section>
+
+        <section data-state="part">
+          <h1>Fallback</h1>
+        </section>
+
+        <section>
+          <h2 class="Subtitle Subtitle--discreet">Fallback</h2>
+          <div class="Score">
+            <div class="Score-icon Score-icon--font"></div>
+            <div class="Score-icon Score-icon--SVG"></div>
+          </div>
+          <table>
+            <tr>
+              <th>Icon-font</th>
+              <th>SVG</th>
+            </tr>
+            <tr>
               <td>
                 <ul>
-                  <li>Fallback complexe</li>
+                  <li><a href="http://www.filamentgroup.com/lab/bulletproof_icon_fonts.html">Fallback complexe</a></li>
                 </ul>
               </td>
               <td>
                 <ul>
                   <li>Fallback plus simple</li>
                   <li>A11y simplifiée</li>
+                </ul>
+              </td>
+            </tr>
+            <tr class="fragment">
+              <td>
+                <ul>
+                  <li><a href="http://kudakurage.com/ligature_symbols/">Ligatures</a></li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li class="fragment">Ligatures dans SVG</li>
                 </ul>
               </td>
             </tr>
@@ -243,22 +288,22 @@ if (!isset($root)) {
 
         <section>
           <h2 class="Subtitle Subtitle--discreet">Forme, couleur</h2>
+          <div class="Score">
+            <div class="Score-icon Score-icon--font"></div>
+            <div class="Score-icon Score-icon--SVG"></div>
+          </div>
           <table>
             <tr>
               <th>Icon-font</th>
               <th>SVG</th>
             </tr>
             <tr>
-              <td>Une seule forme</td>
-              <td>Plusieurs formes indépendantes et réutilisables</td>
-            </tr>
-            <tr class="Points fragment">
-              <td class="Point"></td>
-              <td class="Point Point--plus"></td>
+              <td><ul><li>Une seule forme</li></ul></td>
+              <td><ul><li>Plusieurs formes indépendantes et réutilisables</li></ul></td>
             </tr>
             <tr class="fragment">
-              <td>Une seule couleur</td>
-              <td>Plusieurs couleurs et styles avancés</td>
+              <td><ul><li>Une seule couleur</li></ul></td>
+              <td><ul><li>Plusieurs couleurs et styles avancés</li></ul></td>
             </tr>
             <tr class="Points fragment">
               <td class="Point"></td>
@@ -337,6 +382,7 @@ if (!isset($root)) {
               <use xlink:href="#skate" />
             </svg>
           </div>
+          <p class="Showcase-text Image-legend">Images <a href="http://grunticon.com">grunticon.com</a></p>
         </section>
 
         <section data-state="part">
@@ -345,14 +391,18 @@ if (!isset($root)) {
 
         <section>
           <h2 class="Subtitle Subtitle--discreet">Réutilisabilité</h2>
+          <div class="Score">
+            <div class="Score-icon Score-icon--font"></div>
+            <div class="Score-icon Score-icon--SVG"></div>
+          </div>
           <table>
             <tr>
               <th>Icon-font</th>
               <th>SVG</th>
             </tr>
             <tr>
-              <td>Faible et complexe</td>
-              <td>Facile</td>
+              <td><ul><li>Faible et complexe</li></ul></td>
+              <td><ul><li>Facile</li></ul></td>
             </tr>
             <tr class="Points fragment">
               <td class="Point"></td>
@@ -457,6 +507,10 @@ if (!isset($root)) {
 
         <section>
           <h2 class="Subtitle Subtitle--discreet">Positionnement, Alignement, Taille</h2>
+          <div class="Score">
+            <div class="Score-icon Score-icon--font"></div>
+            <div class="Score-icon Score-icon--SVG"></div>
+          </div>
           <table>
             <tr>
               <th>Icon-font</th>
@@ -498,7 +552,7 @@ if (!isset($root)) {
 
         <section data-state="showcase">
           <img src="iamvdo/images/font-awesome-weird.png" alt="">
-          <p class="Showcase-text Image-legend">Icones fontawesome.com</p>
+          <p class="Showcase-text Image-legend">Icones <a href="http://fontawesome.com">fontawesome.com</a></p>
         </section>
 
         <section data-state="part">
@@ -511,14 +565,18 @@ if (!isset($root)) {
 
         <section>
           <h2 class="Subtitle Subtitle--discreet">Animations</h2>
+          <div class="Score">
+            <div class="Score-icon Score-icon--font"></div>
+            <div class="Score-icon Score-icon--SVG"></div>
+          </div>
           <table>
             <tr>
               <th>Icon-font</th>
               <th>SVG</th>
             </tr>
             <tr>
-              <td>Pas vraiment</td>
-              <td>Oui, via CSS et JS</td>
+              <td><ul><li>Pas vraiment</li></ul></td>
+              <td><ul><li>Oui, via CSS et JS</li></ul></td>
             </tr>
             <tr class="Points fragment">
               <td class="Point"></td>
@@ -531,15 +589,23 @@ if (!isset($root)) {
           <style>
           .reveal .stopwatch {
             color: yellow;
+            font-family: Atipo Bold, sans-serif;
+            font-weight: bold;
           }
           .reveal .stopwatch-image {
             display: block;
             margin: auto;
-            width: 100px;
+            width: 200px;
             margin-bottom: 20px;
           }
           .reveal .stopwatch-text {
+            font-size: 2.2em;
+            letter-spacing: -.04em;
             color: #f63752;
+          }
+          .reveal .stopwatch-text small {
+            font-family: Atipo Light, sans-serif;
+            font-weight: 100;
           }
           </style>
           <div class="stopwatch">
@@ -551,27 +617,41 @@ if (!isset($root)) {
 
         <section data-state="showcase">
           <style>
+          #mail-with-anim .icon {
+            width: 256px;
+            height: 256px;
+          }
           </style>
-          <div class="icons icon-svg">
+          <div id="mail-with-anim" class="icons icon-svg">
             <object class="icon" data="iamvdo/demos/icons-mail-anim.svg" type="image/svg+xml"></object>
           </div>
           <p class="u-small u-aligncenter u-margin">Cliquez pour recevoir un mail</p>
         </section>
 
         <section data-state="part">
-          <h1>Styles avancés</h1>
+          <h1>CSS avancées</h1>
         </section>
 
         <section>
-          <h2 class="Subtitle Subtitle--discreet">Styles avancés</h2>
+          <h2 class="Subtitle Subtitle--discreet">CSS avancées</h2>
+          <div class="Score">
+            <div class="Score-icon Score-icon--font"></div>
+            <div class="Score-icon Score-icon--SVG"></div>
+          </div>
           <table>
             <tr>
               <th>Icon-font</th>
               <th>SVG</th>
             </tr>
             <tr>
-              <td>Pas vraiment</td>
-              <td>Dégradés CSS<br>Masques, filtres, mode de fusion, etc.</td>
+              <td><ul><li>Pas vraiment</li></ul></td>
+              <td>
+                <ul>
+                  <li>Dégradés CSS</li>
+                  <li>Masques, filtres, mode de fusion, etc.</li>
+                  <li>Propriétés custom CSS (variables)</li>
+                </ul>
+              </td>
             </tr>
             <tr class="Points fragment">
               <td class="Point"></td>
@@ -733,25 +813,59 @@ if (!isset($root)) {
               animPath(path);
               var mask = s.select('.svg-icon-mask');
               svgs[i].addEventListener('mouseenter', animMask.bind(this, mask, true));
+              svgs[i].parentNode.addEventListener('focus', animMask.bind(this, mask, true));
               svgs[i].addEventListener('mouseleave', animMask.bind(this, mask, false));
+              svgs[i].parentNode.addEventListener('blur', animMask.bind(this, mask, false));
             };
           </script>
         </section>
 
+        <section data-state="showcase">
+          <div class="texts">
+            <?php  echo file_get_contents('iamvdo/demos/storage-vars.svg'); ?>
+            <svg class="icon">
+              <use xlink:href="#new" style="--remaining: 80;" />
+            </svg>
+            <svg class="icon">
+              <use xlink:href="#new" style="--remaining: 65;" />
+            </svg>
+            <svg class="icon">
+              <use xlink:href="#new" style="--remaining: 45;" />
+            </svg>
+            <svg class="icon">
+              <use xlink:href="#new" style="--remaining: 35;" />
+            </svg>
+            <svg class="icon">
+              <use xlink:href="#new" style="--remaining: 0;" />
+            </svg>
+          </div>
+          <p class="Showcase-text Image-legend">Propriétés custom (variables) supportées par Firefox</p>
+        </section>
+
         <section data-state="part">
-          <h1>Scriptable</h1>
+          <h1>JavaScript</h1>
         </section>
 
         <section>
-          <h2 class="Subtitle Subtitle--discreet">Scriptable</h2>
+          <h2 class="Subtitle Subtitle--discreet">JavaScript</h2>
+          <div class="Score">
+            <div class="Score-icon Score-icon--font"></div>
+            <div class="Score-icon Score-icon--SVG"></div>
+          </div>
           <table>
             <tr>
               <th>Icon-font</th>
               <th>SVG</th>
             </tr>
             <tr>
-              <td>Non, pas vraiment</td>
-              <td>Oui<br>Génération d'icones contextuelles à la volée</td>
+              <td><ul><li>Non, pas vraiment</li></ul></td>
+              <td>
+                <ul>
+                  <li>Oui</li>
+                  <li>Inclus dans l'icone</li>
+                  <li>SVG DOM</li>
+                </ul>
+              </td>
             </tr>
             <tr class="Points fragment">
               <td class="Point"></td>
@@ -762,8 +876,67 @@ if (!isset($root)) {
 
         <section data-state="showcase">
           <style>
+          #storage-dyn .icon {
+            width: 256px;
+            height: 256px;
+          }
           </style>
-          <p>Storage dynamique ?</p>
+          <div id="storage-dyn"></div>
+          <input type="range" id="range" min="0" max="100">
+          <p class="Showcase-text Image-legend">Icone SVG créée via JavaScript</p>
+          <script>
+          var value = 50;
+
+          function createSVG () {
+            var NS = 'http://www.w3.org/2000/svg';
+            // svg element
+            var svg = document.createElementNS(NS, 'svg');
+                svg.setAttribute('class', 'icon');
+                svg.setAttributeNS(null, 'viewBox', '0 0 100 100');
+                svg.innerHTML = '<defs><clipPath id="clip-storage-dyn"><use xlink:href="#part4" /><use xlink:href="#part3" /><use xlink:href="#part2" /><use xlink:href="#part1" /></clipPath></defs>';
+            // g element
+            var g = document.createElementNS(NS, 'g');
+                g.setAttributeNS(null, 'clip-path', 'url(#clip-storage-dyn)');
+            // rect element
+            var rect = document.createElementNS(NS, 'rect');
+                rect.setAttribute('width', 100);
+                rect.setAttribute('height', 100);
+                rect.setAttributeNS(null, 'fill', '#777');
+            // path element
+            var path = document.createElementNS(NS, 'path');
+                path.setAttribute('id', 'PATH');
+                path.setAttributeNS(null, 'd', 'M100,100H0V-19.5h18.333C18.333-2.333,32.843,0.167,50,0.167S82.167-2.167,82.167-19.5H100V100z');
+            // set 
+            setStylePath(value, path);
+
+            // append elements
+            g.appendChild(rect);
+            g.appendChild(path);
+            svg.appendChild(g);
+            document.getElementById('storage-dyn').appendChild(svg);
+          }
+
+          createSVG();
+
+          var range = document.getElementById('range');
+          range.addEventListener('input', changeValue);
+
+          function changeValue (e) {
+            value = e.target.value;
+            setStylePath(value);
+          }
+
+          function setStylePath (value, path) {
+            path = path || document.getElementById('PATH');
+            value = 100 - value;
+            // SVG way
+            path.setAttributeNS(null, 'fill', 'hsl(' + value + ', 100%, 50%)');
+            path.setAttributeNS(null, 'transform', 'translate(0, ' + value + ')');
+            // CSS way
+            // path.style.fill = 'hsl(' + value + ', 100%, 50%)';
+            // path.style.transform = 'translateY(' + value + 'px)';
+          }
+          </script>
         </section>
 
         <section data-state="part">
@@ -772,13 +945,17 @@ if (!isset($root)) {
 
         <section>
           <h2 class="Subtitle Subtitle--discreet">RWD</h2>
+          <div class="Score">
+            <div class="Score-icon Score-icon--font"></div>
+            <div class="Score-icon Score-icon--SVG"></div>
+          </div>
           <table>
             <tr>
               <th>Icon-font</th>
               <th>SVG</th>
             </tr>
             <tr>
-              <td>Non</td>
+              <td><ul><li>Non</li></ul></td>
               <td>
                 <ul>
                   <li>Véritablement responsive</li>
@@ -794,18 +971,19 @@ if (!isset($root)) {
           </table>
         </section>
 
-        <section data-background="cyan">
+        <section data-state="showcase">
           <style>
-          .reveal .container {
-            width: 100px;
-            height: 100px;
+          #rwd-container {
+            width: 200px;
+            height: 200px;
             overflow: hidden;
             resize: both;
             margin: auto;
             background: url(iamvdo/demos/rwd.svg) center / contain no-repeat;
           }
           </style>
-          <div class="container"></div>
+          <div id="rwd-container"></div>
+          <p class="Image-legend">Icones <a href="https://useiconic.com">useiconic.com</a></p>
         </section>
 
         <section data-state="part">
@@ -814,6 +992,10 @@ if (!isset($root)) {
 
         <section>
           <h2 class="Subtitle Subtitle--discreet">Création</h2>
+          <div class="Score">
+            <div class="Score-icon Score-icon--font"></div>
+            <div class="Score-icon Score-icon--SVG"></div>
+          </div>
           <table>
             <tr>
               <th>Icon-font</th>
@@ -822,13 +1004,13 @@ if (!isset($root)) {
             <tr>
               <td><ul>
                   <li>Complexe</li>
-                  <li>Des outils, mais nécessite un SVG</li>
+                  <li>Des outils (<a href="http://icomoon.io">icomoon.io</a>), mais nécessite un SVG</li>
                   <li>Donc…</li>
                 </ul></td>
               <td>
                 <ul>
                   <li>N'importe quel outil vectoriel</li>
-                  <li>C'est du XML</li>
+                  <li>On peut apprendre le SVG : c'est du XML</li>
                 </ul>
               </td>
             </tr>
@@ -850,6 +1032,7 @@ if (!isset($root)) {
             <li>Réutilisable</li>
             <li>Multi-effets</li>
             <li>Positionnement simplifié</li>
+            <li>Dégradation gracieuse</li>
             <li>Meilleure a11y</li>
             <li>CSS + JS</li>
           </ul>
@@ -867,22 +1050,7 @@ if (!isset($root)) {
           <p class="u-aligncenter"><a href="http://slides.iamvdo.me/kiwiparty15">slides.iamvdo.me/kiwiparty15</a></p>
         </section>
 
-        <script>
-        // update score
-        var points = [0,0];
-        var allPoints = document.querySelectorAll('.Points');
-        console.log(allPoints);
-        [].forEach.call(allPoints, function (pts) {
-          if (pts.firstElementChild.classList.contains('Point--plus')) {
-            points[0]++;
-          }
-          if (pts.firstElementChild.nextElementSibling.classList.contains('Point--plus')) {
-            points[1]++;
-          }
-          pts.firstElementChild.innerHTML = points[0];
-          pts.firstElementChild.nextElementSibling.innerHTML = points[1];
-        });
-        </script>
+        
 
       </div>
 
@@ -893,6 +1061,79 @@ if (!isset($root)) {
 
     <script src="lib/js/head.min.js"></script>
     <script src="js/reveal.min.js"></script>
+    <script>
+        // update score
+        
+        /*
+        var allPoints = document.querySelectorAll('.Points');
+        [].forEach.call(allPoints, function (pts) {
+          if (pts.firstElementChild.classList.contains('Point--plus')) {
+            pts.firstElementChild.innerHTML = 'WIN';
+            points[0]++;
+          }
+          if (pts.firstElementChild.nextElementSibling.classList.contains('Point--plus')) {
+            pts.firstElementChild.nextElementSibling.innerHTML = 'WIN';
+            points[1]++;
+          }
+          pts.firstElementChild.innerHTML += ' (' + points[0] + ')';
+          pts.firstElementChild.nextElementSibling.innerHTML += ' (' + points[1] + ')';
+        });
+        */
+        function initScore () {
+          var points = [0,0];
+          updateScore(points);
+          return points;
+        }
+        function getScore (event) {
+          if (event.fragment.classList.contains('Points')) {
+            var points = initScore();
+            var allPoints = document.querySelectorAll('.Points');
+            for (var i = 0; i < allPoints.length; i++) {
+              var pts = allPoints[i];
+              if (pts.firstElementChild.classList.contains('Point--plus')) {
+                pts.firstElementChild.innerHTML = 'WIN';
+                points[0]++;
+              }
+              if (pts.firstElementChild.nextElementSibling.classList.contains('Point--plus')) {
+                pts.firstElementChild.nextElementSibling.innerHTML = 'WIN';
+                points[1]++;
+              }
+              if (event.type === 'fragmenthidden' && pts === event.fragment) {
+                if (pts === allPoints[0]) {
+                  points = initScore();
+                  updateScore(points);
+                }
+                break;
+              }
+              updateScore(points);
+              if (event.type === 'fragmentshown' && pts === event.fragment) {
+                break;
+              }
+            }
+          }
+        }
+        function updateScore (points) {
+          var allScores = document.querySelectorAll('.Score');
+          [].forEach.call(allScores, function (scores) {
+            scores.firstElementChild.innerHTML = 'Font<span>' + points[0] + '</span>';
+            scores.firstElementChild.nextElementSibling.innerHTML = 'SVG<span>' + points[1] + '</span>';
+            if (points[1] > points[0]) {
+              scores.firstElementChild.classList.remove('Score-icon--win');
+              scores.firstElementChild.nextElementSibling.classList.add('Score-icon--win');
+            } else {
+              scores.firstElementChild.nextElementSibling.classList.remove('Score-icon--win');
+              scores.firstElementChild.classList.add('Score-icon--win');
+            }
+          });
+        }
+        initScore();
+        Reveal.addEventListener('fragmentshown', function(event) {
+          getScore(event);
+        });
+        Reveal.addEventListener('fragmenthidden', function(event) {
+          getScore(event);
+        });
+        </script>
 
     <script>
 

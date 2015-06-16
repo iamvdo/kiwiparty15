@@ -1,6 +1,16 @@
 /**
  * iamvdo's theme
  */
+
+@font-face {
+  font-family: Atipo Bold;
+  src: url(fonts/atipo6.woff);
+}
+@font-face {
+  font-family: Atipo Light;
+  src: url(fonts/atipo9.woff);
+}
+
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
@@ -17,7 +27,7 @@ body {
 
 .reveal {
   box-sizing: border-box;
-  font-family: Open Sans, sans-serif;
+  font-family: Atipo Light, sans-serif;
   font-size: 36px;
   font-weight: normal;
   /* letter-spacing: -0.05em; */
@@ -87,15 +97,14 @@ body {
   margin: 0 0 20px 0;
   padding: .2em;
   color: white;
-  font-family: Montserrat, sans-serif;
+  font-family: Atipo Bold, sans-serif;
   line-height: 0.9em;
-  letter-spacing: -0.05em;
   text-transform: none;
   text-shadow: none;
 }
 
-.reveal h1 { font-size: 2.8em; }
-.reveal h2 { font-size: 1.8em;  }
+.reveal h1 { font-size: 2.8em; letter-spacing: -0.04em; line-height: 1.2;}
+.reveal h2 { font-size: 1.8em; letter-spacing: -0.02em;}
 .reveal h3 { font-size: 1.1em; text-align: left; display: block; background: transparent; color: #111;}
 .reveal h4 { font-size: 1em;    }
 
@@ -313,6 +322,9 @@ body {
 /*********************************************
  * PARTS
  *********************************************/
+.vdoMenu li.part a {
+  background: #2980b9;
+}
 .part .state-background {
   background: #2980b9;
   background-size: 100%;
@@ -338,7 +350,8 @@ body {
 }
 
 .showcase .state-background {
-  background: #333;
+  background: #222;
+  /* background: linear-gradient(to bottom right, #333, #111); */
 }
 .reveal .Showcase-text {
   color: #eee;
@@ -431,6 +444,9 @@ body {
 .reveal .Subtitle--discreet {
   font-size: 2.8rem;
   text-align: left;
+}
+.reveal .Point--plus {
+  background: yellowgreen;
 }
 
 /*********************************************

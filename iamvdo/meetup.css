@@ -1,3 +1,34 @@
-
-
-.vdoMenu li.part a { background: #2980b9; }
+.reveal .Score {
+  position: absolute;
+  right: 0; top: -10px;
+  display: flex;
+  font-size: 1.25rem;
+}
+.reveal .Score-icon {
+  width: 80px; height: 80px;
+  padding: 0;
+  border-radius: 50%;
+  background: red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #111;
+  font-size: .85em;
+  line-height: 1.2;
+}
+.reveal .Score-icon span {
+  display: block;
+  font-size: 2em;
+  margin: 0;
+}
+.reveal .Score-icon--font {
+  background: #fff;
+  margin-right: -15px;
+}
+.reveal .Score-icon--SVG {
+  background: #fff;
+}
+.reveal .Score-icon--win {
+  background: yellowgreen;
+}
