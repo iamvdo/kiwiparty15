@@ -82,10 +82,6 @@ if (!isset($root)) {
           <p class="Showcase-text Image-legend">yahoo.com <small>(20 décembre 1996)</small>, fnac.com <small>(11 mai 2000)</small>, amazon.com <small>(9 juin 2000)</small>, System 1 Mac <small>(1984)</small></p>
         </section>
 
-        <section data-state="showcase">
-          <img src="iamvdo/images/icon-construction.gif" alt="">
-        </section>
-
         <section data-state="jumbo">
           <p class="Jumbo-title">Genre beaucoup ?</p>
           <p class="Jumbo-title fragment">SPRITES FTW</p>
@@ -144,7 +140,7 @@ if (!isset($root)) {
         <section>
           <h2>SVG</h2>
           <ul>
-            <li class="fragment">Format d'images vectoriel</li>
+            <li class="fragment">Format d'image vectoriel</li>
             <li class="fragment">C'est du XML</li>
           </ul>
 <pre class="fragment"><code class="language-markup" contenteditable="" spellcheck="false">&lt;svg>
@@ -170,21 +166,22 @@ if (!isset($root)) {
             </tr>
             <tr>
               <td>C'est un hack</td>
-              <td>Construit pour</td>
+              <td>C'est son rôle</td>
             </tr>
           </table>
         </section>
 
         <section data-state="jumbo">
           <p class="Jumbo-title Jumbo-title--big">KTHXBYE</p>
+          <p class="Jumbo-title fragment">Bon, allons plus loin…</p>
         </section>
 
         <section data-state="part">
-          <h1>Utilisation / intégration</h1>
+          <h1>Utilisation<br>Intégration</h1>
         </section>
 
         <section>
-          <h2 class="Subtitle Subtitle--discreet">Utilisation / intégration</h2>
+          <h2 class="Subtitle Subtitle--discreet">Utilisation, intégration</h2>
           <table>
             <tr>
               <th>Icon-font</th>
@@ -202,11 +199,11 @@ if (!isset($root)) {
         </section>
 
         <section data-state="part">
-          <h1>Support / Fallback</h1>
+          <h1>Support<br>Fallback</h1>
         </section>
 
         <section>
-          <h2 class="Subtitle Subtitle--discreet">Support / fallback</h2>
+          <h2 class="Subtitle Subtitle--discreet">Support, fallback</h2>
           <table>
             <tr>
               <th>Icon-font</th>
@@ -221,8 +218,17 @@ if (!isset($root)) {
               <td class="Point"></td>
             </tr>
             <tr class="fragment">
-              <td>Fallback complexe</td>
-              <td>Fallback plus simple</td>
+              <td>
+                <ul>
+                  <li>Fallback complexe</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>Fallback plus simple</li>
+                  <li>A11y simplifiée</li>
+                </ul>
+              </td>
             </tr>
             <tr class="Points fragment">
               <td class="Point"></td>
@@ -232,11 +238,11 @@ if (!isset($root)) {
         </section>
 
         <section data-state="part">
-          <h1>Forme & Couleur</h1>
+          <h1>Forme<br>Couleur</h1>
         </section>
 
         <section>
-          <h2 class="Subtitle Subtitle--discreet">Forme & Couleur</h2>
+          <h2 class="Subtitle Subtitle--discreet">Forme, couleur</h2>
           <table>
             <tr>
               <th>Icon-font</th>
@@ -438,7 +444,7 @@ if (!isset($root)) {
   &lt;/defs>
   
   &lt;symbol id="icon" viewBox="0 0 100 100">
-    &lt;use xlink:href="#forme" />
+    &lt;use xlink:href="#forme" style="..." />
   &lt;/symbol>
 
   &lt;use xlink:href="#icon" style="..." />
@@ -499,6 +505,10 @@ if (!isset($root)) {
           <h1>Animations</h1>
         </section>
 
+        <section data-state="showcase">
+          <img src="iamvdo/images/icon-construction.gif" alt="">
+        </section>
+
         <section>
           <h2 class="Subtitle Subtitle--discreet">Animations</h2>
           <table>
@@ -541,12 +551,314 @@ if (!isset($root)) {
 
         <section data-state="showcase">
           <style>
-          
           </style>
           <div class="icons icon-svg">
-            <object class="icon" type="image/svg+xml" data="iamvdo/demos/icons-mail-anim.svg"></object>
+            <object class="icon" data="iamvdo/demos/icons-mail-anim.svg" type="image/svg+xml"></object>
           </div>
           <p class="u-small u-aligncenter u-margin">Cliquez pour recevoir un mail</p>
+        </section>
+
+        <section data-state="part">
+          <h1>Styles avancés</h1>
+        </section>
+
+        <section>
+          <h2 class="Subtitle Subtitle--discreet">Styles avancés</h2>
+          <table>
+            <tr>
+              <th>Icon-font</th>
+              <th>SVG</th>
+            </tr>
+            <tr>
+              <td>Pas vraiment</td>
+              <td>Dégradés CSS<br>Masques, filtres, mode de fusion, etc.</td>
+            </tr>
+            <tr class="Points fragment">
+              <td class="Point"></td>
+              <td class="Point Point--plus"></td>
+            </tr>
+          </table>
+        </section>
+
+        <section data-background="linear-gradient(to bottom right, white -50%, mediumvioletred 20%, black 160%)">
+          <style>
+          #ex10 {
+          }
+          #ex10 .menu {
+            text-align: center;
+            margin: 100px auto;
+          }
+          #ex10 .icon {
+            width: 4em;
+            height: 4em;
+            margin: 0 30px;
+            display: inline-block;
+            color: rgba(0,0,0,.5);
+            font-weight: 700;
+            border: none;
+          }
+          #ex10 .icon svg {
+            fill: #fff;
+            width: 100%;
+            height: 100%;
+          }
+          #ex10 .svg-icon-color {
+            fill: #fff;
+          }
+          #ex10 .icon .svg-icon-mask {
+            fill: orange;
+          }
+          #ex10 .icon--twitter .svg-icon-mask {
+            fill: #55acee;
+          }
+          #ex10 .icon--conf .svg-icon-mask {
+            fill: yellowgreen;
+          }
+          #ex10 .svg-icon-shadow {
+            fill: rgba(0,0,0,.5);
+          }
+          </style>
+          <div id="ex10">
+            <?php  echo file_get_contents('iamvdo/demos/icons.svg'); ?>
+            <nav class="menu u-right" role="navigation">
+              <a class="menu-item icon icon--blog image" href="/blog">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="20 20 60 60" width="50" height="50" class="svg-icon svg-icon--blog" role="img" aria-label="Blog">
+                  <use xlink:href="#svg-blog" class="svg-icon-shadow" filter="url(#blur)" transform="translate(0, 1)"/>
+                  <clipPath id="clip-blog">
+                    <use xlink:href="#svg-blog"></use>
+                  </clipPath>
+                  <g clip-path="url(#clip-blog)">
+                    <rect class="svg-icon-color" width="120" height="120" x="-10" y="-10"></rect>
+                    <path class="svg-icon-mask" d="M88.5,95.5H69H49.5H30H10.5V76V56.5V37V17.5c0,0,5.9-4,19.5-4s19.5,4,19.5,4s4.4,4,19.5,4s19.5-4,19.5-4V37v19.5V76V95.5z" transform="translate(0,70)"/>
+                  </g>
+                </svg>
+              </a>
+              <a class="menu-item icon icon--conf image" href="/conf">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="20 20 60 60" width="50" height="50" class="svg-icon svg-icon--conf" role="img" aria-label="Conférences">
+                  <use xlink:href="#svg-conf" class="svg-icon-shadow" filter="url(#blur)" transform="translate(0, 1)"/>
+                  <clipPath id="clip-conf">
+                    <use xlink:href="#svg-conf"></use>
+                  </clipPath>
+                  <g clip-path="url(#clip-conf)">
+                    <rect class="svg-icon-color" width="120" height="120" x="-10" y="-10"></rect>
+                    <path class="svg-icon-mask" d="M88.5,95.5H69H49.5H30H10.5V76V56.5V37V17.5c0,0,5.9-4,19.5-4s19.5,4,19.5,4s4.4,4,19.5,4s19.5-4,19.5-4V37v19.5V76V95.5z" transform="translate(0,70)"/>
+                  </g>
+                </svg>
+              </a>
+              <a class="menu-item icon icon--twitter image" href="http://twitter.com/iamvdo">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="20 20 60 60" width="50" height="50" class="svg-icon svg-icon--twitter" role="img" aria-label="Twitter">
+                  <use xlink:href="#svg-twitter" class="svg-icon-shadow" filter="url(#blur)" transform="translate(0, 1)"/>
+                  <clipPath id="clip-twitter">
+                    <use xlink:href="#svg-twitter"></use>
+                  </clipPath>
+                  <g clip-path="url(#clip-twitter)">
+                    <rect class="svg-icon-color" width="120" height="120" x="-10" y="-10"></rect>
+                    <path class="svg-icon-mask" d="M88.5,95.5H69H49.5H30H10.5V76V56.5V37V17.5c0,0,5.9-4,19.5-4s19.5,4,19.5,4s4.4,4,19.5,4s19.5-4,19.5-4V37v19.5V76V95.5z" transform="translate(0,70)"/>
+                  </g>
+                </svg>
+              </a>
+            </nav>
+          </div>
+          <script src="iamvdo/demos/lib/snap.js"></script>
+          <script>
+            var cubicBezier = function (x1, y1, x2, y2, epsilon) {
+              var curveX = function(t){
+                var v = 1 - t;
+                return 3 * v * v * t * x1 + 3 * v * t * t * x2 + t * t * t;
+              };
+              var curveY = function(t){
+                var v = 1 - t;
+                return 3 * v * v * t * y1 + 3 * v * t * t * y2 + t * t * t;
+              };
+              var derivativeCurveX = function(t){
+                var v = 1 - t;
+                return 3 * (2 * (t - 1) * t + v * v) * x1 + 3 * (- t * t * t + 2 * v * t) * x2;
+              };
+              return function (t) {
+                var x = t, t0, t1, t2, x2, d2, i;
+                // First try a few iterations of Newton's method -- normally very fast.
+                for (t2 = x, i = 0; i < 8; i++){
+                  x2 = curveX(t2) - x;
+                  if (Math.abs(x2) < epsilon) return curveY(t2);
+                  d2 = derivativeCurveX(t2);
+                  if (Math.abs(d2) < 1e-6) break;
+                  t2 = t2 - x2 / d2;
+                }
+                t0 = 0, t1 = 1, t2 = x;
+                if (t2 < t0) return curveY(t0);
+                if (t2 > t1) return curveY(t1);
+                // Fallback to the bisection method for reliability.
+                while (t0 < t1){
+                  x2 = curveX(t2);
+                  if (Math.abs(x2 - x) < epsilon) return curveY(t2);
+                  if (x > x2) t0 = t2;
+                  else t1 = t2;
+                  t2 = (t1 - t0) * .5 + t0;
+                }
+                // Failure
+                return curveY(t2);
+              };
+            };
+            var duration = 1000;
+            var epsilon = (1000 / 60 / duration) / 4;
+            var svgs = document.querySelectorAll('#ex10 .svg-icon');
+            function animPath (e) {
+              e.animate(
+                {d: 'M88.5,95.5H69H49.5H30H10.5V76V56.5V37V17.5c0,0,5.9,6,19.5,6s19.5-6,19.5-6s4.4-6,19.5-6s19.5,6,19.5,6V37v19.5V76V95.5z'},
+                300,
+                function () {
+                  e.animate(
+                    {d: 'M88.5,95.5H69H49.5H30H10.5V76V56.5V37V17.5c0,0,5.9-4,19.5-4s19.5,4,19.5,4s4.4,4,19.5,4s19.5-4,19.5-4V37v19.5V76V95.5z'},
+                    300,
+                    function () {
+                      animPath(e);
+                    });
+                }
+              )
+            }
+            var timingFunction = cubicBezier(.1,.1,.1,1, epsilon);
+            function animMask (e, direction) {
+              var value = 0;
+              if (!direction) {
+                value = 70;
+              }
+              e.animate(
+                {transform: 'translate(0,' + value + ')'},
+                1800,
+                timingFunction)
+            }
+            for (var i = 0; i < svgs.length; i++) {
+              var s = Snap(svgs[i]);
+              var path = s.select('.svg-icon-mask');
+              animPath(path);
+              var mask = s.select('.svg-icon-mask');
+              svgs[i].addEventListener('mouseenter', animMask.bind(this, mask, true));
+              svgs[i].addEventListener('mouseleave', animMask.bind(this, mask, false));
+            };
+          </script>
+        </section>
+
+        <section data-state="part">
+          <h1>Scriptable</h1>
+        </section>
+
+        <section>
+          <h2 class="Subtitle Subtitle--discreet">Scriptable</h2>
+          <table>
+            <tr>
+              <th>Icon-font</th>
+              <th>SVG</th>
+            </tr>
+            <tr>
+              <td>Non, pas vraiment</td>
+              <td>Oui<br>Génération d'icones contextuelles à la volée</td>
+            </tr>
+            <tr class="Points fragment">
+              <td class="Point"></td>
+              <td class="Point Point--plus"></td>
+            </tr>
+          </table>
+        </section>
+
+        <section data-state="showcase">
+          <style>
+          </style>
+          <p>Storage dynamique ?</p>
+        </section>
+
+        <section data-state="part">
+          <h1>RWD</h1>
+        </section>
+
+        <section>
+          <h2 class="Subtitle Subtitle--discreet">RWD</h2>
+          <table>
+            <tr>
+              <th>Icon-font</th>
+              <th>SVG</th>
+            </tr>
+            <tr>
+              <td>Non</td>
+              <td>
+                <ul>
+                  <li>Véritablement responsive</li>
+                  <li>L'image embarque les différentes «versions»</li>
+                  <li>C'est le parent qui est le viewport</li>
+                </ul>
+              </td>
+            </tr>
+            <tr class="Points fragment">
+              <td class="Point"></td>
+              <td class="Point Point--plus"></td>
+            </tr>
+          </table>
+        </section>
+
+        <section data-background="cyan">
+          <style>
+          .reveal .container {
+            width: 100px;
+            height: 100px;
+            overflow: hidden;
+            resize: both;
+            margin: auto;
+            background: url(iamvdo/demos/rwd.svg) center / contain no-repeat;
+          }
+          </style>
+          <div class="container"></div>
+        </section>
+
+        <section data-state="part">
+          <h1>Création</h1>
+        </section>
+
+        <section>
+          <h2 class="Subtitle Subtitle--discreet">Création</h2>
+          <table>
+            <tr>
+              <th>Icon-font</th>
+              <th>SVG</th>
+            </tr>
+            <tr>
+              <td><ul>
+                  <li>Complexe</li>
+                  <li>Des outils, mais nécessite un SVG</li>
+                  <li>Donc…</li>
+                </ul></td>
+              <td>
+                <ul>
+                  <li>N'importe quel outil vectoriel</li>
+                  <li>C'est du XML</li>
+                </ul>
+              </td>
+            </tr>
+            <tr class="Points fragment">
+              <td class="Point"></td>
+              <td class="Point Point--plus"></td>
+            </tr>
+          </table>
+        </section>
+
+        <section data-state="jumbo">
+          <p class="Jumbo-title ">Créer un SVG avec AI, c’est comme créer du HTML avec Dreamweaver</p>
+        </section>
+
+        <section>
+          <h2 class="Subtitle">Bénéfices SVG</h2>
+          <ul>
+            <li>Facile à créer</li>
+            <li>Réutilisable</li>
+            <li>Multi-effets</li>
+            <li>Positionnement simplifié</li>
+            <li>Meilleure a11y</li>
+            <li>CSS + JS</li>
+          </ul>
+          <p class="fragment">Inconvénients :</p>
+          <ul class="fragment">
+            <li>Workflow complet pas évident</li>
+            <li>Compatibilité navigateur non homogène</li>
+            <li>Parait plus complexe</li>
+          </ul>
         </section>
 
         <section class="me">

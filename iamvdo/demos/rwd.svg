@@ -4,17 +4,17 @@
     .iconic--lg { opacity: 0; }
     .iconic--md { opacity: 0; }
     .iconic--sm { opacity: 0; }
-    @media (max-width: 64px) {
+    @media (max-width: 128px) {
       .iconic--sm {
         opacity: 1;
       }
     }
-    @media (min-width: 65px) and (max-width: 128px) {
+    @media (min-width: 129px) and (max-width: 256px) {
       .iconic--md {
         opacity: 1;
       }
     }
-    @media (min-width: 129px) {
+    @media (min-width: 257px) {
       .iconic--lg {
         opacity: 1;
       }

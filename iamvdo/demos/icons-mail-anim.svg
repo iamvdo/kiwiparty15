@@ -12,7 +12,7 @@
     <use xlink:href="#mail" mask="url(#mask)" fill="#777" />
     <use xlink:href="#notif" fill="deeppink" />
   </g>
-  <script xlink:href="tween/tweenlite.js"></script>
+  <script xlink:href="lib/tweenlite.js"></script>
   <script>
   <![CDATA[
   var elems = [document.getElementById('clip'), document.getElementById('notif')];
