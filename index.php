@@ -1128,7 +1128,15 @@ if (!isset($root)) {
         <section>
           <h2 class="Subtitle">Ressources</h2>
           <ul>
-            <a href="http://betravis.github.io/icon-methods/svg-sprite-sheets.html">SVG Sprite / Icon Stack</a>
+            <li>Articles / Blog
+              <ul>
+                <li><a href="http://forecastfont.iconvau.lt/">Multi-layered icon font</a></li>
+                <li><a href="http://betravis.github.io/icon-methods/svg-sprite-sheets.html">SVG Sprite / Icon Stack</a></li>
+                <li><a href="http://fvsch.com/code/svg-sprite/">Using an external SVG sprite from HTML</a></li>
+                <li><a href="https://vimeo.com/99828116">Chris Coyier talk on SVG</a></li>
+                <li><a href="http://www.smashingmagazine.com/2014/11/03/styling-and-animating-svgs-with-css/4/">Styling and animating SVG</a></li>
+              </ul>
+            </li>
             <li>Ligatures
               <ul>
                 <li><a href="http://kudakurage.com/ligature_symbols/">http://kudakurage.com/ligature_symbols/</a></li>
