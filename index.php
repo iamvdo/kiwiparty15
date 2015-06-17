@@ -92,7 +92,7 @@ if (!isset($root)) {
         </section>
 
         <section data-state="jumbo">
-          <p class="Jumbo-title Jumbo-title--big">RETINA, HD</p>
+          <p class="Jumbo-title Jumbo-title--big">Retina, HD</p>
         </section>
 
         <section data-state="showcase">
@@ -104,6 +104,7 @@ if (!isset($root)) {
           <img class="Image Image--unstyled Image--side Image--fakealign" src="iamvdo/images/kiwi-64.png" alt="">
           <img class="Image Image--unstyled Image--side" src="iamvdo/images/kiwi-128.png" alt="">
           <p class="Showcase-text Image-legend">Création d'images adaptées: <code>kiwi.png</code>, <code>kiwi@2x.png</code>, <code>kiwi@2.6x.png</code>, etc...</p>
+          <p class="Showcase-text Image-legend">Icones par <a href="http://www.freepik.com/free-vector/fruits-collection_785792.htm">Freepik</a></p>
         </section>
 
         <section data-state="jumbo">
@@ -123,30 +124,62 @@ if (!isset($root)) {
             <li class="fragment">Rendu possible grâce à <code>@font-face</code></li>
           </ul>
 <pre class="fragment"><code class="css" contenteditable="" spellcheck="false">@font-face {
-  font-family: myIcons;
-  src: url(myIcons.woff);
+  font-family: myIcons; src: url(myIcons.woff);
 }
-.element {
-  font-family: myIcons;
-}
+.element { font-family: myIcons; }
 </code></pre>
+          <div class="demo fragment">
+            <style>
+              .reveal .demo {
+                margin: 1em;
+              }
+              @font-face {
+                font-family: 'myIcons';
+                src: url('iamvdo/fonts/icon.woff') format('woff');
+              }
+              .reveal .demo-icon {
+                font-family: 'myIcons';
+                font-size: 1.4em;
+                text-rendering: optimizeLegibility;
+                margin: 1em;
+              }
+              .reveal .demo-icon--home:before {
+                content: "home";
+              }
+              .reveal .demo-icon--camera:before {
+                content: "camera";
+              }
+              .reveal .demo-icon--music:before {
+                content: "music";
+              }
+            </style>
+            <span class="demo-icon demo-icon--home"></span>
+            <span class="demo-icon demo-icon--camera"></span>
+            <span class="demo-icon demo-icon--music"></span>
+          </div>
         </section>
 
         <section data-state="jumbo">
-          <p class="Jumbo-title">Basically, it's a hack!</p>
+          <p class="Jumbo-title">Concrètement, c'est un hack!</p>
         </section>
 
         <section>
           <h2>SVG</h2>
           <ul>
-            <li class="fragment">Format d'image vectoriel</li>
+            <li class="fragment">Format d'image <span class="fragment">vectoriel</span></li>
             <li class="fragment">C'est du XML</li>
           </ul>
-<pre class="fragment"><code class="language-markup" contenteditable="" spellcheck="false">&lt;svg>
-  &lt;circle cx="50" cy="50" r="10" />
-  &lt;rect width="30" height="10" x="45" y="50" />
+<pre class="fragment"><code class="language-markup" contenteditable="" spellcheck="false">&lt;svg viewBox="0 0 100 100">
+  &lt;circle cx="50" cy="50" r="50" fill="yellow" />
+  &lt;rect width="50" height="50" x="50" y="50" fill="blue" />
 &lt;/svg>
 </code></pre>
+          <div class="demo fragment">
+            <svg width="300" height="150" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="50" fill="yellow" />
+              <rect width="50" height="50" x="50" y="50" fill="blue" />
+            </svg>
+          </div>
         </section>
 
         <section data-state="jumbo">
@@ -176,11 +209,11 @@ if (!isset($root)) {
         </section>
 
         <section data-state="part">
-          <h1>Utilisation<br>Intégration</h1>
+          <h1>Intégration</h1>
         </section>
 
         <section>
-          <h2 class="Subtitle Subtitle--discreet">Utilisation, intégration</h2>
+          <h2 class="Subtitle Subtitle--discreet">Intégration</h2>
           <div class="Score">
             <div class="Score-icon Score-icon--font"></div>
             <div class="Score-icon Score-icon--SVG"></div>
@@ -196,7 +229,9 @@ if (!isset($root)) {
                 <ul>
                   <li>6 méthodes d'inclusion
                     <ul>
-                      <li>Inline, <code>&lt;use></code>, <code>&lt;object></code>, <code>&lt;embed></code>, <code>&lt;img></code>, <code>background-image</code></li>
+                      <li>Inline</li>
+                      <li><code>&lt;object></code>, <code>&lt;iframe></code>, <code>&lt;embed></code></li>
+                      <li><code>&lt;img></code>, <code>background-image</code></li>
                     </ul>
                   </li>
                 </ul>
@@ -207,6 +242,45 @@ if (!isset($root)) {
               <td class="Point Point--plus"></td>
             </tr>
           </table>
+        </section>
+
+        <section data-state="part">
+          <h1>Création</h1>
+        </section>
+
+        <section>
+          <h2 class="Subtitle Subtitle--discreet">Création</h2>
+          <div class="Score">
+            <div class="Score-icon Score-icon--font"></div>
+            <div class="Score-icon Score-icon--SVG"></div>
+          </div>
+          <table>
+            <tr>
+              <th>Icon-font</th>
+              <th>SVG</th>
+            </tr>
+            <tr>
+              <td><ul>
+                  <li>Complexe</li>
+                  <li>Des outils (<a href="http://icomoon.io">icomoon.io</a>), mais nécessite un SVG</li>
+                  <li>Donc…</li>
+                </ul></td>
+              <td>
+                <ul>
+                  <li>N'importe quel outil vectoriel</li>
+                  <li>On peut apprendre le SVG : c'est du XML</li>
+                </ul>
+              </td>
+            </tr>
+            <tr class="Points fragment">
+              <td class="Point"></td>
+              <td class="Point Point--plus"></td>
+            </tr>
+          </table>
+        </section>
+
+        <section data-state="jumbo">
+          <p class="Jumbo-title ">Créer un SVG avec AI, c’est comme créer du HTML avec Dreamweaver</p>
         </section>
 
         <section data-state="part">
@@ -258,7 +332,7 @@ if (!isset($root)) {
               </td>
               <td>
                 <ul>
-                  <li>Fallback plus simple</li>
+                  <li><a href="http://www.grunticon.com">Fallback plus simple</a></li>
                   <li>A11y simplifiée</li>
                 </ul>
               </td>
@@ -268,6 +342,9 @@ if (!isset($root)) {
                 <ul>
                   <li><a href="http://kudakurage.com/ligature_symbols/">Ligatures</a></li>
                 </ul>
+                <div class="demo">
+                  <span class="demo-icon" contenteditable>Zone de test</span>
+                </div>
               </td>
               <td>
                 <ul>
@@ -386,11 +463,11 @@ if (!isset($root)) {
         </section>
 
         <section data-state="part">
-          <h1>Réutilisabilité</h1>
+          <h1>Réutilisabilité des formes</h1>
         </section>
 
         <section>
-          <h2 class="Subtitle Subtitle--discreet">Réutilisabilité</h2>
+          <h2 class="Subtitle Subtitle--discreet">Réutilisabilité des formes</h2>
           <div class="Score">
             <div class="Score-icon Score-icon--font"></div>
             <div class="Score-icon Score-icon--SVG"></div>
@@ -402,7 +479,7 @@ if (!isset($root)) {
             </tr>
             <tr>
               <td><ul><li>Faible et complexe</li></ul></td>
-              <td><ul><li>Facile</li></ul></td>
+              <td><ul><li>Facile</li><li>Partie intégrante du SVG</li></ul></td>
             </tr>
             <tr class="Points fragment">
               <td class="Point"></td>
@@ -501,6 +578,10 @@ if (!isset($root)) {
 &lt;/svg></code></pre>
         </section>
 
+        <section data-state="jumbo">
+          <p class="Jumbo-title Jumbo-title--big">Plusieurs <code>&lt;symbol></code><br>==<br>Sprites SVG</p>
+        </section>
+
         <section data-state="part">
           <h1>Positionnement<br>Alignement<br>Taille</h1>
         </section>
@@ -519,11 +600,14 @@ if (!isset($root)) {
             <tr>
               <td>
                 <ul>
-                  <li>Propriétés de texte, de ligne, de polices
+                  <li>Propriétés de texte
                     <ul>
-                      <li><code>font-family</code>, <code>font-size</code>, <code>font-weight</code>, etc.</li>
-                      <li><code>line-height</code>, <code>vertical-align</code>, etc.</li>
-                      <li>ligne de base, hauteur d’x, aspect ratio, etc.</li>
+                      <li><code>font-family</code>, <code>font-size</code>, <code>font-weight</code>, <code>line-height</code>, <code>vertical-align</code>, etc.</li>
+                    </ul>
+                  </li>
+                  <li>Métrique de la police
+                    <ul>
+                      <li>ligne de base, hauteur d’x, aspect ratio, ascendante, descendante, etc.</li>
                     </ul>
                   </li>
                 </ul>
@@ -545,18 +629,18 @@ if (!isset($root)) {
           </table>
         </section>
 
-        <section data-state="jumbo">
-          <p class="Jumbo-title Jumbo-title--big">TEXTE != FORME</p>
-          <p class="Jumbo-title fragment">Personne n'aime modifier le line-height</p>
-        </section>
-
         <section data-state="showcase">
           <img src="iamvdo/images/font-awesome-weird.png" alt="">
           <p class="Showcase-text Image-legend">Icones <a href="http://fontawesome.com">fontawesome.com</a></p>
         </section>
 
+        <section data-state="jumbo">
+          <p class="Jumbo-title Jumbo-title--big">TEXTE != FORME</p>
+          <p class="Jumbo-title fragment">Personne n'aime modifier le line-height</p>
+        </section>
+
         <section data-state="part">
-          <h1>Animations</h1>
+          <h1>Interactions<br>Animations</h1>
         </section>
 
         <section data-state="showcase">
@@ -564,7 +648,7 @@ if (!isset($root)) {
         </section>
 
         <section>
-          <h2 class="Subtitle Subtitle--discreet">Animations</h2>
+          <h2 class="Subtitle Subtitle--discreet">Interactions, animations</h2>
           <div class="Score">
             <div class="Score-icon Score-icon--font"></div>
             <div class="Score-icon Score-icon--SVG"></div>
@@ -576,7 +660,14 @@ if (!isset($root)) {
             </tr>
             <tr>
               <td><ul><li>Pas vraiment</li></ul></td>
-              <td><ul><li>Oui, via CSS et JS</li></ul></td>
+              <td>
+                <ul>
+                  <li>Intégrées</li>
+                  <li>Animations SMIL (même si…)</li>
+                  <li>Animations CSS</li>
+                  <li>JavaScript</li>
+                </ul>
+              </td>
             </tr>
             <tr class="Points fragment">
               <td class="Point"></td>
@@ -840,6 +931,23 @@ if (!isset($root)) {
             </svg>
           </div>
           <p class="Showcase-text Image-legend">Propriétés custom (variables) supportées par Firefox</p>
+<pre class="fragment"><code class="language-markup" contenteditable="" spellcheck="false">&lt;svg>
+  &lt;style>
+  .symbol--low { --remaining: 80; }
+  &lt;/style>
+  &lt;use xlink:href="#symbol" class="symbol--low" />
+&lt;/svg></code></pre>
+<pre class="fragment"><code class="language-markup" contenteditable="" spellcheck="false">&lt;svg>
+  &lt;symbol id="symbol" clip-path="url(#clip)">
+    &lt;style>
+    .remaining {
+      fill: hsl(var(--remaining), 100%, 50%);
+      transform: translateY(calc(var(--remaining) * 1px));
+    }
+    &lt;/style>
+    &lt;path class="remaining" d="..." />
+  &lt;/symbol>
+&lt;/svg></code></pre>
         </section>
 
         <section data-state="part">
@@ -863,7 +971,7 @@ if (!isset($root)) {
                 <ul>
                   <li>Oui</li>
                   <li>Inclus dans l'icone</li>
-                  <li>SVG DOM</li>
+                  <li>Accès au SVG DOM</li>
                 </ul>
               </td>
             </tr>
@@ -883,7 +991,7 @@ if (!isset($root)) {
           </style>
           <div id="storage-dyn"></div>
           <input type="range" id="range" min="0" max="100">
-          <p class="Showcase-text Image-legend">Icone SVG créée via JavaScript</p>
+          <p class="Showcase-text Image-legend">Icone SVG entièrement créée via JavaScript</p>
           <script>
           var value = 50;
 
@@ -986,45 +1094,6 @@ if (!isset($root)) {
           <p class="Image-legend">Icones <a href="https://useiconic.com">useiconic.com</a></p>
         </section>
 
-        <section data-state="part">
-          <h1>Création</h1>
-        </section>
-
-        <section>
-          <h2 class="Subtitle Subtitle--discreet">Création</h2>
-          <div class="Score">
-            <div class="Score-icon Score-icon--font"></div>
-            <div class="Score-icon Score-icon--SVG"></div>
-          </div>
-          <table>
-            <tr>
-              <th>Icon-font</th>
-              <th>SVG</th>
-            </tr>
-            <tr>
-              <td><ul>
-                  <li>Complexe</li>
-                  <li>Des outils (<a href="http://icomoon.io">icomoon.io</a>), mais nécessite un SVG</li>
-                  <li>Donc…</li>
-                </ul></td>
-              <td>
-                <ul>
-                  <li>N'importe quel outil vectoriel</li>
-                  <li>On peut apprendre le SVG : c'est du XML</li>
-                </ul>
-              </td>
-            </tr>
-            <tr class="Points fragment">
-              <td class="Point"></td>
-              <td class="Point Point--plus"></td>
-            </tr>
-          </table>
-        </section>
-
-        <section data-state="jumbo">
-          <p class="Jumbo-title ">Créer un SVG avec AI, c’est comme créer du HTML avec Dreamweaver</p>
-        </section>
-
         <section>
           <h2 class="Subtitle">Bénéfices SVG</h2>
           <ul>
@@ -1036,7 +1105,7 @@ if (!isset($root)) {
             <li>Meilleure a11y</li>
             <li>CSS + JS</li>
           </ul>
-          <p class="fragment">Inconvénients :</p>
+          <h2 class="Subtitle fragment">Inconvénients</h2>
           <ul class="fragment">
             <li>Workflow complet pas évident</li>
             <li>Compatibilité navigateur non homogène</li>
@@ -1050,7 +1119,28 @@ if (!isset($root)) {
           <p class="u-aligncenter"><a href="http://slides.iamvdo.me/kiwiparty15">slides.iamvdo.me/kiwiparty15</a></p>
         </section>
 
-        
+        <section>
+          <h2 class="Subtitle">Ressources</h2>
+          <ul>
+            <a href="http://betravis.github.io/icon-methods/svg-sprite-sheets.html">SVG Sprite / Icon Stack</a>
+            <li>Ligatures
+              <ul>
+                <li><a href="http://kudakurage.com/ligature_symbols/">http://kudakurage.com/ligature_symbols/</a></li>
+                <li><a href="http://timepiece.inostudio.de/">http://timepiece.inostudio.de/</a></li>
+                <li><a href="http://intridea.github.io/stately/">http://intridea.github.io/stately/</a></li>
+              </ul>
+            </li>
+            <li>Outils
+              <ul>
+                <li><a href="http://grunticon.com">Grunticon</a></li>
+                <li><a href="https://github.com/jonathantneal/svg4everybody">Polyfill pour external <code>&lt;use></code> svg4everybody</a></li>
+                <li>Optimiseur: <a href="https://github.com/svg/svgo">SVGO</a>, <a href="https://jakearchibald.github.io/svgomg/">SVGOMG</a></li>
+                <li><a href="http://lukewhitehouse.co.uk/blog/svg-icon-workflow/">Creating an SVG icon workflow</a></li>
+                <li><a href="https://github.com/jkphl/svg-sprite">Automatic SVG sprites</a></li>
+              </ul>
+            </li>
+          </ul>
+        </section>
 
       </div>
 
