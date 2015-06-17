@@ -63,12 +63,15 @@ if (!isset($root)) {
         </section>
 
         <section class="me">
-          <h2>Vincent De Oliveira</h2>
+          <h2>Hello, c'est <a href="http://twitter.com/iamvdo">@iamvdo</a></h2>
           <ul class="vcard">
             <li>Formateur web <a href="http://www.ensg.eu" title="Ecole Nationale des Sciences Géographiques">ENSG Géomatique</a></li>
-            <li><a href="http://twitter.com/iamvdo">@iamvdo</a></li>
-            <li><a href="http://css3create.com">CSS3Create</a>, <a href="http://iamvdo.me">iamvdo</a>, <a href="http://pleeease.io">Pleeease</a></li>
-            <li>Livre <a href="http://livre-css3.fr">CSS3 Le design web moderne</a></li>
+            <li>Je fais du CSS
+              <ul>
+                <li><a href="http://css3create.com">CSS3Create</a>, <a href="http://iamvdo.me">iamvdo</a>, <a href="http://pleeease.io">Pleeease</a></li>
+                <li>Livre <a href="http://livre-css3.fr">CSS3 Le design web moderne</a></li>
+              </ul>
+            </li>
           </ul>
         </section>
 
