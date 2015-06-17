@@ -1108,12 +1108,15 @@ if (!isset($root)) {
             <li>Meilleure a11y</li>
             <li>CSS + JS</li>
           </ul>
-          <h2 class="Subtitle fragment">Inconvénients</h2>
-          <ul class="fragment">
-            <li>Workflow complet pas évident</li>
-            <li>Compatibilité navigateur non homogène</li>
-            <li>Parait plus complexe</li>
-          </ul>
+          <div class="fragment">
+            <h2 class="Subtitle">Inconvénients</h2>
+            <ul>
+              <li>Beaucoup de polices d'icones prêt à l'emploi</li>
+              <li>Workflow complet pas évident</li>
+              <li>Compatibilité navigateur non homogène</li>
+              <li>Parait plus complexe</li>
+            </ul>
+          </div>
         </section>
 
         <section class="me">
