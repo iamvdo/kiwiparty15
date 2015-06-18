@@ -1146,7 +1146,7 @@ if (!isset($root)) {
           <div class="fragment">
             <h2 class="Subtitle">Inconvénients</h2>
             <ul>
-              <li>Pas (beaucoup) de sets prêts à l'emploi</li>
+              <li>Encore peu de sets prêts à l'emploi</li>
               <li>Workflow complet pas évident</li>
               <li>Compatibilité navigateur non homogène</li>
               <li>Parait plus complexe</li>
