@@ -1217,22 +1217,6 @@ if (!isset($root)) {
     <script src="js/reveal.min.js"></script>
     <script>
         // update score
-        
-        /*
-        var allPoints = document.querySelectorAll('.Points');
-        [].forEach.call(allPoints, function (pts) {
-          if (pts.firstElementChild.classList.contains('Point--plus')) {
-            pts.firstElementChild.innerHTML = 'WIN';
-            points[0]++;
-          }
-          if (pts.firstElementChild.nextElementSibling.classList.contains('Point--plus')) {
-            pts.firstElementChild.nextElementSibling.innerHTML = 'WIN';
-            points[1]++;
-          }
-          pts.firstElementChild.innerHTML += ' (' + points[0] + ')';
-          pts.firstElementChild.nextElementSibling.innerHTML += ' (' + points[1] + ')';
-        });
-        */
         function initScore () {
           var points = [0,0];
           updateScore(points);
@@ -1312,10 +1296,6 @@ if (!isset($root)) {
         theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
         transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
 
-        // Parallax scrolling
-        //parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
-        //parallaxBackgroundSize: '2100px 900px',
-        //
         multiplex: {
           secret: secret,
           id: '6f426e34f39fc844',
