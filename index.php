@@ -203,12 +203,85 @@ if (!isset($root)) {
               <td>C'est un hack</td>
               <td>C'est son rôle</td>
             </tr>
+            <tr class="Points">
+              <td class="Point"></td>
+              <td class="Point" style="background: yellowgreen">WIN</td>
+            </tr>
           </table>
         </section>
 
         <section data-state="jumbo">
           <p class="Jumbo-title Jumbo-title--big">KTHXBYE</p>
           <p class="Jumbo-title fragment">Bon, allons plus loin…</p>
+        </section>
+
+        <section data-state="part">
+          <h1>Utilisation<br>Création</h1>
+        </section>
+
+        <section>
+          <h2 class="Subtitle Subtitle--discreet">Utilisation</h2>
+          <div class="Score">
+            <div class="Score-icon Score-icon--font"></div>
+            <div class="Score-icon Score-icon--SVG"></div>
+          </div>
+          <table>
+            <tr>
+              <th>Icon-font</th>
+              <th>SVG</th>
+            </tr>
+            <tr>
+              <td>
+                <ul>
+                  <li>Nombreux set d'icones prêt à l'emploi</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>De plus en plus : <a href="https://icomoon.io/app">icomoon</a>, <a href="http://fontastic.me/">fontastic</a>, etc.</li>
+                </ul>
+              </td>
+            </tr>
+            <tr class="Points fragment">
+              <td class="Point Point--plus"></td>
+              <td class="Point"></td>
+            </tr>
+          </table>
+        </section>
+
+        <section>
+          <h2 class="Subtitle Subtitle--discreet">Création</h2>
+          <div class="Score">
+            <div class="Score-icon Score-icon--font"></div>
+            <div class="Score-icon Score-icon--SVG"></div>
+          </div>
+          <table>
+            <tr>
+              <th>Icon-font</th>
+              <th>SVG</th>
+            </tr>
+            <tr>
+              <td><ul>
+                  <li>Complexe</li>
+                  <li>Des outils (<a href="http://icomoon.io">icomoon.io</a>), mais nécessite un SVG</li>
+                  <li>Donc…</li>
+                </ul></td>
+              <td>
+                <ul>
+                  <li>N'importe quel outil vectoriel</li>
+                  <li>On peut apprendre le SVG : c'est du XML</li>
+                </ul>
+              </td>
+            </tr>
+            <tr class="Points fragment">
+              <td class="Point"></td>
+              <td class="Point Point--plus"></td>
+            </tr>
+          </table>
+        </section>
+
+        <section data-state="jumbo">
+          <p class="Jumbo-title ">Créer un SVG avec AI, c’est comme créer du HTML avec Dreamweaver</p>
         </section>
 
         <section data-state="part">
@@ -248,46 +321,7 @@ if (!isset($root)) {
         </section>
 
         <section data-state="part">
-          <h1>Création</h1>
-        </section>
-
-        <section>
-          <h2 class="Subtitle Subtitle--discreet">Création</h2>
-          <div class="Score">
-            <div class="Score-icon Score-icon--font"></div>
-            <div class="Score-icon Score-icon--SVG"></div>
-          </div>
-          <table>
-            <tr>
-              <th>Icon-font</th>
-              <th>SVG</th>
-            </tr>
-            <tr>
-              <td><ul>
-                  <li>Complexe</li>
-                  <li>Des outils (<a href="http://icomoon.io">icomoon.io</a>), mais nécessite un SVG</li>
-                  <li>Donc…</li>
-                </ul></td>
-              <td>
-                <ul>
-                  <li>N'importe quel outil vectoriel</li>
-                  <li>On peut apprendre le SVG : c'est du XML</li>
-                </ul>
-              </td>
-            </tr>
-            <tr class="Points fragment">
-              <td class="Point"></td>
-              <td class="Point Point--plus"></td>
-            </tr>
-          </table>
-        </section>
-
-        <section data-state="jumbo">
-          <p class="Jumbo-title ">Créer un SVG avec AI, c’est comme créer du HTML avec Dreamweaver</p>
-        </section>
-
-        <section data-state="part">
-          <h1>Support</h1>
+          <h1>Support<br>Fallback</h1>
         </section>
 
         <section>
@@ -310,10 +344,6 @@ if (!isset($root)) {
               <td class="Point Point--plus"></td>
             </tr>
           </table>
-        </section>
-
-        <section data-state="part">
-          <h1>Fallback</h1>
         </section>
 
         <section>
@@ -340,6 +370,10 @@ if (!isset($root)) {
                 </ul>
               </td>
             </tr>
+            <tr class="Points fragment">
+              <td class="Point"></td>
+              <td class="Point Point--plus"></td>
+            </tr>
             <tr class="fragment">
               <td>
                 <ul>
@@ -356,8 +390,8 @@ if (!isset($root)) {
               </td>
             </tr>
             <tr class="Points fragment">
-              <td class="Point"></td>
               <td class="Point Point--plus"></td>
+              <td class="Point"></td>
             </tr>
           </table>
         </section>
@@ -447,6 +481,7 @@ if (!isset($root)) {
               <use xlink:href="#mail-with-notif-color" />
             </svg>
           </div>
+          <p class="Showcase-text Image-legend">En haut: police d'icones, en bas: SVG</p>
         </section>
 
         <section data-state="showcase">
@@ -634,7 +669,7 @@ if (!isset($root)) {
 
         <section data-state="showcase">
           <img src="iamvdo/images/font-awesome-weird.png" alt="">
-          <p class="Showcase-text Image-legend">Icones <a href="http://fontawesome.com">fontawesome.com</a></p>
+          <p class="Showcase-text Image-legend">Icones <a href="http://fortawesome.github.io/Font-Awesome/">fontawesome.com</a></p>
         </section>
 
         <section data-state="jumbo">
@@ -1100,7 +1135,7 @@ if (!isset($root)) {
         <section>
           <h2 class="Subtitle">Bénéfices SVG</h2>
           <ul>
-            <li>Facile à créer</li>
+            <li>(Assez) facile à créer</li>
             <li>Réutilisable</li>
             <li>Multi-effets</li>
             <li>Positionnement simplifié</li>
@@ -1111,7 +1146,7 @@ if (!isset($root)) {
           <div class="fragment">
             <h2 class="Subtitle">Inconvénients</h2>
             <ul>
-              <li>Beaucoup de polices d'icones prêt à l'emploi</li>
+              <li>Pas (beaucoup) de sets prêts à l'emploi</li>
               <li>Workflow complet pas évident</li>
               <li>Compatibilité navigateur non homogène</li>
               <li>Parait plus complexe</li>
@@ -1130,11 +1165,26 @@ if (!isset($root)) {
           <ul>
             <li>Articles / Blog
               <ul>
-                <li><a href="http://forecastfont.iconvau.lt/">Multi-layered icon font</a></li>
                 <li><a href="http://betravis.github.io/icon-methods/svg-sprite-sheets.html">SVG Sprite / Icon Stack</a></li>
                 <li><a href="http://fvsch.com/code/svg-sprite/">Using an external SVG sprite from HTML</a></li>
                 <li><a href="https://vimeo.com/99828116">Chris Coyier talk on SVG</a></li>
                 <li><a href="http://www.smashingmagazine.com/2014/11/03/styling-and-animating-svgs-with-css/4/">Styling and animating SVG</a></li>
+                <li><a href="http://svgontheweb.com">SVG on the web, a practical guide</a></li>
+              </ul>
+            </li>
+            <li>Sets de polices d'icones
+              <ul>
+                <li><a href="http://fortawesome.github.io/Font-Awesome/">FontAwesome</a></li>
+                <li><a href="http://forecastfont.iconvau.lt/">Multi-layered icon font</a></li>
+                <li><a href="http://fontello.com/">Fontello, générateur à partir de plusieurs sets</a></li>
+              </ul>
+            </li>
+            <li>Sets mixte (SVG & icon-font)
+              <ul>
+                <li><a href="https://useiconic.com/open/">Iconic</a></li>
+                <li><a href="https://icomoon.io/app">Icomoon</a></li>
+                <li><a href="http://fontastic.me/">Fontastic</a></li>
+                <li><a href="http://google.github.io/material-design-icons/">Material Design Google</a></li>
               </ul>
             </li>
             <li>Ligatures
