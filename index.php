@@ -303,9 +303,9 @@ if (!isset($root)) {
               <td><ul><li>1 seule méthode d'inclusion</li></ul></td>
               <td>
                 <ul>
-                  <li>6 méthodes d'inclusion
+                  <li>7 méthodes d'inclusion
                     <ul>
-                      <li>Inline</li>
+                      <li>Inline, <code>&lt;use></code></li>
                       <li><code>&lt;object></code>, <code>&lt;iframe></code>, <code>&lt;embed></code></li>
                       <li><code>&lt;img></code>, <code>background-image</code></li>
                     </ul>
